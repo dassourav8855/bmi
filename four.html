@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black; color: beige;">
+    <ul class="language">
+        <li>java script</li>
+    </ul>
+</body>
+<script>
+    const fun=(language)=>{
+      const li= document.createElement("li")
+         li.innerHTML=`${language}`
+         document.querySelector(".language").appendChild(li)
+    }
+    fun("python")
+    // ab ek optiimised way mey li.imner html k jagah ye wala use karna job me bhi betichod
+     function optiimised(language2){
+        const li= document.createElement(`li`)
+        li.appendChild(document.createTextNode(language2))
+        document.querySelector(".language").appendChild(li) 
+
+     }
+     optiimised("jQuery")
+//edit
+ const newli= document.querySelector("li:nth-child(2)")
+ const li=document.createElement("li")
+ li.appendChild(document.createTextNode("physics"))
+ newli.replaceWith(li)
+
+ //remove
+
+ const pi= document.querySelector("li:last-child")
+ pi.remove()
+
+
+</script>
+</html>

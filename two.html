@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Dot</title>
+</head>
+<body style="background-color: black; color: beige;">
+    <div class="parent">
+        <div class="day">mon</div>
+        <div class="day">tues</div>
+        <div class="day">wed</div>
+        <div class="day">thurs</div>
+    </div>
+</body>
+<script>
+    const num=document.querySelector(".parent")
+    console.log(num);
+    console.log(num.children);
+    console.log(num.children[0].innerHTML);
+    for (let i = 0; i < num.children.length; i++) {
+        console.log (num.children[i].innerHTML);
+        
+    }
+    num.children[2].style.color="orange";
+    console.log(num.firstElementChild);
+    // console.log(num.firstChild);
+    const day=document.querySelectorAll(".day")
+    const night=day[0].parentElement;
+    console.log(night);
+    console.log(day[0].nextElementSibling);
+     console.log(num.childNodes);
+
+   
+
+</script>
+</html>
